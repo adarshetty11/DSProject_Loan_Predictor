@@ -1,1 +1,2 @@
-# DSProject_Loan_Predictor
+![](/client/ui2.png)
+![](/client/ui1.png)
