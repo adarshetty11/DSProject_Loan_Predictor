@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+
+<h1 class="heading">Loan Prediction Website</h1>
+
+<form class="form">
+	<h2>GENDER</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-gender-1" name="uigender" value="1" checked/>
+		<label for="radio-gender-1">Female</label>
+		<input type="radio" id="radio-gender-2" name="uigender" value="2" />
+		<label for="radio-gender-2">Male</label>
+    </div>  
+</form>
+
+<form class="form">
+<h2>MARRIED</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-married-1" name="uimarried" value="1" checked/>
+		<label for="radio-married-1">No</label>
+		<input type="radio" id="radio-married-2" name="uimarried" value="2" />
+		<label for="radio-married-2">Yes</label>
+    </div>
+</form>
+
+<form class="form">
+    <h2>Education</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-education-1" name="uieducation" value="1" checked/>
+            <label for="radio-education-1">Not Graduate</label>
+            <input type="radio" id="radio-education-2" name="uieducation" value="2" />
+            <label for="radio-education-2">Graduate</label>
+        </div>
+</form>
+
+<form class="form">
+    <h2>Self Employed</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-employ-1" name="uiselfemployed" value="1" checked/>
+            <label for="radio-employ-1">No</label>
+            <input type="radio" id="radio-employ-2" name="uiselfemployed" value="2" />
+            <label for="radio-employ-2">Yes</label>
+        </div>
+</form>
+
+<form class="form">
+
+    <h2>Applicants Income</h2>
+    <input class="area"  type="text" id="uiappin" class="floatLabel" name="appincome" value="1000" required>
+
+    <h2>Co-Applicants Income</h2>
+    <input class="area"  type="text" id="uiappinterm" class="floatLabel" name="coappincome" value="1000" required>
+
+    <h2>Loan Amount</h2>
+    <input class="area"  type="text" id="uiloan" class="floatLabel" name="loan" value="1000" required>
+
+    <h2>Loan Amount Term</h2>
+    <input class="area"  type="text" id="uiloan_term" class="floatLabel" name="loanterm" value="1000" required>
+
+</form>
+
+<form class="form">
+    <h2>Credit History</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-credit-1" name="uihistory" value="1" checked/>
+            <label for="radio-credit-1">0</label>
+            <input type="radio" id="radio-credit-2" name="uihistory" value="2"/>
+            <label for="radio-credit-2">1</label>
+        </div>
+</form>
+
+<form class="form">
+        <div>
+            <h2>Dependents</h2>
+            <select class="location" name="" id="uidependents">
+                <option value="" disabled="disabled" selected="selected">Choose Dependents</option>
+                    <option>Dependent_0</option>
+                    <option>Dependent_1</option>
+            </select>
+        </div>
+</form>
+    
+<form class="form">
+    <div>
+        <h2>Property Area</h2>
+        <select class="location" name="" id="uiproperty">
+            <option value="" disabled="disabled" selected="selected">Choose Property Area</option>
+                <option>Urban</option>
+                <option>Rural</option>
+        </select>
+    </div>
+</form>
+		
+	<button class="submit" onclick="onClickedPredictLoan()" type="button">Predict Loan Status</button>
+	<div id="uiPredictloan" class="result">	<h2></h2> </div>
+</body>
+</html>
+
